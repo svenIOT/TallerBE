@@ -1,0 +1,272 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.API\\Taller.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.API\\Taller.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.API\\Taller.API.csproj",
+        "projectName": "Taller.API",
+        "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.API\\Taller.API.csproj",
+        "packagesPath": "C:\\Users\\MR. ROBOT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MR. ROBOT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.BL\\Taller.BL.csproj": {
+                "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.BL\\Taller.BL.csproj"
+              },
+              "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj": {
+                "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj"
+              },
+              "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj": {
+                "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.BL\\Taller.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.BL\\Taller.BL.csproj",
+        "projectName": "Taller.BL",
+        "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.BL\\Taller.BL.csproj",
+        "packagesPath": "C:\\Users\\MR. ROBOT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MR. ROBOT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj": {
+                "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj"
+              },
+              "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj": {
+                "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj",
+        "projectName": "Taller.CORE",
+        "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj",
+        "packagesPath": "C:\\Users\\MR. ROBOT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MR. ROBOT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj",
+        "projectName": "Taller.DAL",
+        "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\Taller.DAL.csproj",
+        "packagesPath": "C:\\Users\\MR. ROBOT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MR. ROBOT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj": {
+                "projectPath": "C:\\Users\\MR. ROBOT\\source\\repos\\Taller.CORE\\Taller.CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.BL.deps.json
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.BL.dll
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.BL.pdb
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.CORE.dll
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.CORE.pdb
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.csprojAssemblyReference.cache
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.AssemblyInfoInputs.cache
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.AssemblyInfo.cs
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.csproj.CoreCompileInputs.cache
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.csproj.CopyComplete
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.dll
+C:\Users\MR. ROBOT\source\repos\Taller.BL\obj\Debug\netcoreapp3.1\Taller.BL.pdb
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.DAL.dll
+C:\Users\MR. ROBOT\source\repos\Taller.BL\bin\Debug\netcoreapp3.1\Taller.DAL.pdb
