@@ -33,6 +33,15 @@ namespace Taller.API
         {
             services.AddControllers();
 
+            //Habilitar CORS en nuestra API
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
             // Inyección de dependecias
             // Contexto
             services.AddDbContext<tallerContext>(opts => opts.UseMySql(Configuration["ConnectionString:TallerDB"]));
