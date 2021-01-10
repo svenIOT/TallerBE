@@ -21,4 +21,3 @@ namespace Taller.API.Controllers
         public bool Login(UserDTO user) => _userBL.Login(user);
     }
 }
-// dotnet ef dbcontext scaffold "server=localhost;port=3306;user=root;password=1234;database=taller" Pomelo.EntityFrameworkCore.MySql -o Models  (-p DAL)
