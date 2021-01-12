@@ -17,17 +17,27 @@ namespace Taller.DAL.Repository.Implements
             _context = context;
         }
         public bool Login(UserDTO userDTO) => _context.Empleado.Any(
-            e => e.Usuario == userDTO.Username && e.Contrasena == userDTO.Password
+            e => e.Usuario == "jefe" && e.Contrasena == userDTO.Password
             );
 
         public void Add(UserDTO userDTO)
         {
+            // Añadir empleado
             _context.Empleado.Add(new Empleado()
                 {
-                    Dni = "holiquetal",
+                    Dni = userDTO.Dni,
                     Usuario = userDTO.Username,
                     Contrasena = userDTO.Password,
                     CodConce = 1
+                }
+            );
+            // Añadir en persona
+            _context.Persona.Add(new Persona()
+                {
+                    Dni = userDTO.Dni,
+                    Nombre = userDTO.Name,
+                    Apellidos = userDTO.Surnames,
+                    Telefono = userDTO.Phone
                 }
             );
             _context.SaveChanges();
