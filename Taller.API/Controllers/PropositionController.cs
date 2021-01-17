@@ -18,10 +18,7 @@ namespace Taller.API.Controllers
             _propositionBL = propositionBL;
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<PropositionDTO>> GetPropositions() => Ok(_propositionBL.GetPropositions());
-
         [HttpGet, Route("Sales")]
-        public ActionResult<IEnumerable<PropositionDTO>> GetSalesPropositions() => Ok(_propositionBL.GetPropositions().Where(p => p.Vendido == true).ToList());
+        public ActionResult<IEnumerable<PropositionDTO>> GetSalesPropositions() => Ok(_propositionBL.GetSalesPropositions());
     }
 }

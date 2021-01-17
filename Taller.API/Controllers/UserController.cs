@@ -23,8 +23,9 @@ namespace Taller.API.Controllers
         {
             _userBL.Add(usuarioDTO);
             return Ok(true);
-        } 
+        }
 
+        [HttpPost]
         public ActionResult<IEnumerable<UserDTO>> GetUsers() => Ok(_userBL.GetUsers());
     }
 }

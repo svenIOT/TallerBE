@@ -5,8 +5,10 @@ using Taller.CORE.DTO;
 
 namespace Taller.DAL.Repository.Contracts
 {
-    public interface IRepositoryProposition
+    public interface IRepositoryUser
     {
-        IEnumerable<PropositionDTO> GetPropositions();
+        bool Login(UserDTO userDTO);
+        void Add(UserDTO userDTO);
+        IEnumerable<UserDTO> GetUsers();
     }
 }

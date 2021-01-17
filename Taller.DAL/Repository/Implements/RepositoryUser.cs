@@ -37,15 +37,23 @@ namespace Taller.DAL.Repository.Implements
         {
             var usersDTO = new List<UserDTO>();
 
+            var allUsers = _context.Persona.ToList();
+
             _context.Empleado.ToList().ForEach(u => usersDTO.Add(
                     new UserDTO
                     {
+                        Dni = u.Dni,
                         Username = u.Usuario,
-                        Password = u.Contrasena
+                        Password = u.Contrasena,
+                        EmployeeId = u.CodEmpleado,
+                        Name = allUsers.Where(e => e.Dni == u.Dni).First().Nombre,
+                        Surnames = allUsers.Where(e => e.Dni == u.Dni).First().Apellidos,
+                        Phone = allUsers.Where(e => e.Dni == u.Dni).First().Telefono
                     }
                 ));
             return usersDTO;
         }
+            
 
         private void _addInPersonTable(UserDTO userDTO) => _context.Persona.Add(new Persona()
             {

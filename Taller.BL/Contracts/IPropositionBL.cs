@@ -7,6 +7,6 @@ namespace Taller.BL.Contracts
 {
     public interface IPropositionBL
     {
-        IEnumerable<PropositionDTO> GetPropositions();
+        IEnumerable<PropositionDTO> GetSalesPropositions();
     }
 }

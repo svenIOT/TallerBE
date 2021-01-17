@@ -10,10 +10,14 @@ namespace Taller.BL.Implementations
     public class PropositionBL : IPropositionBL
     {
         public IRepositoryProposition _repositoryProposition { get; set; }
-        public PropositionBL(IRepositoryProposition repositoryProposition)
+        public IRepositoryUser _repositoryUser { get; set; }
+        public PropositionBL(IRepositoryProposition repositoryProposition, IRepositoryUser repositoryUser)
         {
             _repositoryProposition = repositoryProposition;
+            _repositoryUser = repositoryUser;
         }
-        public IEnumerable<PropositionDTO> GetPropositions() => _repositoryProposition.GetPropositions();
+        public IEnumerable<PropositionDTO> GetSalesPropositions() => _repositoryProposition.GetSalesPropositions(_repositoryUser.GetUsers());
+
+       
     }
 }
