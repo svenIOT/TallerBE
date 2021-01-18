@@ -13,6 +13,7 @@ namespace Taller.CORE.DTO
         public string TipoVehiculo { get; set; }
         public int CodVentas { get; set; }
         public string NombreVendedor { get; set; }
+        public int TotalVendido { get; set; }
 
         public PropositionDTO()
         {
