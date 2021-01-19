@@ -14,6 +14,7 @@ namespace Taller.CORE.DTO
         public string Surnames { get; set; }
         public string Phone { get; set; }
         public string EmployeeType { get; set; }
+        public string Specialty { get; set; }
 
         public UserDTO()
         {

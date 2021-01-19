@@ -48,7 +48,7 @@ namespace Taller.DAL.Repository.Implements
                         EmployeeId = u.CodEmpleado,
                         Name = allUsers.Where(e => e.Dni == u.Dni).First().Nombre,
                         Surnames = allUsers.Where(e => e.Dni == u.Dni).First().Apellidos,
-                        Phone = allUsers.Where(e => e.Dni == u.Dni).First().Telefono
+                        Phone = allUsers.Where(e => e.Dni == u.Dni).First().Telefono,
                     }
                 ));
             return usersDTO;
@@ -82,7 +82,7 @@ namespace Taller.DAL.Repository.Implements
                 {
                     CodMecanico = 0, // Autogenerado
                     CodMecanicoJefe = 1,
-                    CodEspecialidad = _specialtyToNumber(userDTO.EmployeeType),
+                    CodEspecialidad = _specialtyToNumber(userDTO.Specialty),
                     CodEmpleado = userDTO.EmployeeId
                 }
                );
