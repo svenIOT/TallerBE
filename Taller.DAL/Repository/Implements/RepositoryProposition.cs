@@ -16,6 +16,12 @@ namespace Taller.DAL.Repository.Implements
         {
             _context = context;
         }
+
+        /// <summary>
+        /// Obtiene las propuestas de venta (vendidas = true) y los datos del empleado que la realizó
+        /// </summary> 
+        /// <param name="users">Lista con todos los usuarios</param>
+        /// <returns>Todas las propuestas vendidas con los datos del vendedor</returns>
         public IEnumerable<PropositionDTO> GetSalesPropositions(IEnumerable<UserDTO> users) 
         {
             var propositionDTO = new List<PropositionDTO>();
@@ -40,6 +46,12 @@ namespace Taller.DAL.Repository.Implements
             return propositionDTO;
         }
 
+        /// <summary>
+        /// Obtiene el nombre del empeleado de ventas
+        /// </summary>
+        /// <param name="users">Lista con todos los usuarios</param>
+        /// <param name="salesId">Código de ventas</param>
+        /// <returns>String con formato "nombre apellidos"</returns>
         private string getSalesEmployeeName(List<UserDTO> users, int salesId)
         {
             var salesUsers = _context.Ventas.ToList();
@@ -49,6 +61,13 @@ namespace Taller.DAL.Repository.Implements
             return name + " " + surnames;
         }
 
+        /// <summary>
+        /// Obtiene el total de ventas del empleado
+        /// </summary>
+        /// <param name="users">Lista con todos los usuarios</param>
+        /// <param name="soldPropositions">Lista con todas las propuestas vendido = true</param>
+        /// <param name="salesId">Código de ventas</param>
+        /// <returns>Número entero con total de ventas del empleado</returns>
         private int getEmployeeTotalSales(List<UserDTO> users, List<Propuesta> soldPropositions, int salesId)
         {
             var totalResult = 0;

@@ -16,10 +16,20 @@ namespace Taller.DAL.Repository.Implements
         {
             _context = context;
         }
+
+        /// <summary>
+        /// Comprueba si el usuario recibido existe en la BBDD
+        /// </summary> 
+        /// <param name="userDTO">Usuario</param>
+        /// <returns>true o false</returns>
         public bool Login(UserDTO userDTO) => _context.Empleado.Any(
             e => e.Usuario == "jefe" && e.Contrasena == userDTO.Password
             );
 
+        /// <summary>
+        /// Añade el usuario a la BBDD en las tablas persona, empleado, y ventas o mécanico
+        /// </summary> 
+        /// <param name="userDTO">Usuario</param>
         public void Add(UserDTO userDTO)
         {
             userDTO.EmployeeId = 0; // Autogenerado
@@ -33,12 +43,16 @@ namespace Taller.DAL.Repository.Implements
             _context.SaveChanges();
         }
 
+        /// <summary>
+        /// Obtiene todos los usuarios
+        /// </summary> 
+        /// <returns>Enumerable con todos los usuarios</returns>
         public IEnumerable<UserDTO> GetUsers()
         {
             var usersDTO = new List<UserDTO>();
 
             var allUsers = _context.Persona.ToList();
-
+            
             _context.Empleado.ToList().ForEach(u => usersDTO.Add(
                     new UserDTO
                     {
@@ -53,8 +67,11 @@ namespace Taller.DAL.Repository.Implements
                 ));
             return usersDTO;
         }
-            
 
+        /// <summary>
+        /// Añade el usuario en la tabla persona
+        /// </summary> 
+        /// <param name="userDTO">Usuario</param>
         private void _addInPersonTable(UserDTO userDTO) => _context.Persona.Add(new Persona()
             {
                 Dni = userDTO.Dni,
@@ -64,6 +81,10 @@ namespace Taller.DAL.Repository.Implements
             }
                 );
 
+        /// <summary>
+        /// Añade el usuario en la tabla empleado
+        /// </summary> 
+        /// <param name="userDTO">Usuario</param>
         private void _addInEmployeeTable(UserDTO userDTO) => _context.Empleado.Add(new Empleado()
             {
                 CodEmpleado = userDTO.EmployeeId, // Autogenerado
@@ -74,6 +95,10 @@ namespace Taller.DAL.Repository.Implements
             }
                 );
 
+        /// <summary>
+        /// Añade el usuario en la tabla ventas o mecánico
+        /// </summary> 
+        /// <param name="userDTO">Usuario</param>
         private void _addInEmployeeTypeTable(UserDTO userDTO) 
         {
             if (userDTO.EmployeeType == "mechanic")
@@ -96,8 +121,14 @@ namespace Taller.DAL.Repository.Implements
                 }
                );
             }
-        } 
-        
+        }
+
+        /// <summary>
+        /// Convierte el nombre de la especialidad del mecánico a su equivalente código para la tabla 
+        /// especialidad en la BBDD
+        /// </summary> 
+        /// <param name="specialty">Nombre de la especialidad</param>
+        /// <returns>Número con el código de la especialidad (1, 2 o 3)</returns>
         private int _specialtyToNumber(string specialty) 
         {
             int specialtyNumber;
