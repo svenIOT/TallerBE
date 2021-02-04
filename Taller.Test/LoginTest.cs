@@ -27,8 +27,8 @@ namespace KaynJungle.IntegrationTests
                 Url = "/login",
                 Body = new
                 {
-                    Username = "test",
-                    Password = "test"
+                    Username = "jefe",
+                    Password = "f8032d5cae3de20fcec887f395ec9a6a"
                 }
             };
 

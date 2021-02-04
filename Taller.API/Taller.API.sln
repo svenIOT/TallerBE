@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.API", "Taller.API.csproj", "{AA0BBC31-F841-4308-B5C5-E832E7855015}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.API", "Taller.API.csproj", "{AA0BBC31-F841-4308-B5C5-E832E7855015}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.BL", "..\Taller.BL\Taller.BL.csproj", "{3DE0C571-2A55-4A56-BB37-69A613681307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.BL", "..\Taller.BL\Taller.BL.csproj", "{3DE0C571-2A55-4A56-BB37-69A613681307}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.DAL", "..\Taller.DAL\Taller.DAL.csproj", "{E92DB49C-8A71-449E-882A-20C63C256DC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.DAL", "..\Taller.DAL\Taller.DAL.csproj", "{E92DB49C-8A71-449E-882A-20C63C256DC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.CORE", "..\Taller.CORE\Taller.CORE.csproj", "{8541BA77-D276-4522-9820-B81FBEA988FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.CORE", "..\Taller.CORE\Taller.CORE.csproj", "{8541BA77-D276-4522-9820-B81FBEA988FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Test", "..\Taller.Test\Taller.Test.csproj", "{1832C1D5-FDE5-4DF6-AA2D-539170272702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8541BA77-D276-4522-9820-B81FBEA988FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8541BA77-D276-4522-9820-B81FBEA988FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8541BA77-D276-4522-9820-B81FBEA988FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1832C1D5-FDE5-4DF6-AA2D-539170272702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1832C1D5-FDE5-4DF6-AA2D-539170272702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1832C1D5-FDE5-4DF6-AA2D-539170272702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1832C1D5-FDE5-4DF6-AA2D-539170272702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
