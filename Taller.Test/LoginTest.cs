@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentAssertions;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -10,11 +11,11 @@ namespace KaynJungle.IntegrationTests
 {
     public class LoginTests : IClassFixture<TestFixture<Startup>>
     {
-        private HttpClient Client;
+        private HttpClient _client;
 
         public LoginTests(TestFixture<Startup> fixture)
         {
-            Client = fixture.Client;
+            _client = fixture.Client;
         }
 
         [Fact]
@@ -32,12 +33,13 @@ namespace KaynJungle.IntegrationTests
             };
 
             // Act
-            var response = await Client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body));
+            var response = await _client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body));
             var value    = await response.Content.ReadAsStringAsync();
 
             // Assert
             response.EnsureSuccessStatusCode();
-            Assert.True(value == "true");
+            // value.Should().Be("true");       // Con FluentAssertions
+            Assert.True(value == "true");       // Sin FluentAssertions
         }
 
         [Fact]
@@ -55,7 +57,7 @@ namespace KaynJungle.IntegrationTests
             };
 
             // Act
-            var response = await Client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body));
+            var response = await _client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body));
             var value    = await response.Content.ReadAsStringAsync();
 
             // Assert

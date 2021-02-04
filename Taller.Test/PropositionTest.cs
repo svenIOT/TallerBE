@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using Taller.API;
+using Xunit;
+using FluentAssertions;
+
+namespace KaynJungle.IntegrationTests
+{
+    public class PropositionTest : IClassFixture<TestFixture<Startup>>
+    {
+        private HttpClient _client;
+
+        public PropositionTest(TestFixture<Startup> fixture)
+        {
+            _client = fixture.Client;
+        }
+
+        [Fact]
+        public async Task GetSalesPropositions_GetRequest_ReturnsStatusCode200()
+        {
+            // Arrange
+            var request = "/proposition/sales";
+
+            // Act
+            var response = await _client.GetAsync(request);
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            response.StatusCode.Should().Be(HttpStatusCode.OK);      // Con FluentAssertions
+            // Assert.Equal(HttpStatusCode.OK, response.StatusCode); // Sin FluentAssertions
+        }
+
+
+
+    }
+}
