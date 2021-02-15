@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Taller.API;
 using Xunit;
 using FluentAssertions;
+using Taller.CORE.DTO;
+using System.Text.Json;
 
 namespace KaynJungle.IntegrationTests
 {
@@ -27,11 +29,16 @@ namespace KaynJungle.IntegrationTests
 
             // Act
             var response = await _client.GetAsync(request);
+            var value = await response.Content.ReadAsStringAsync();
+            var propositions = JsonSerializer.Deserialize<List<PropositionDTO>>(value);
 
             // Assert
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);      // Con FluentAssertions
+            propositions.Should().HaveCount(10);
             // Assert.Equal(HttpStatusCode.OK, response.StatusCode); // Sin FluentAssertions
+            // Assert.True(propositions.Count == 10);
+
         }
 
         [Fact]

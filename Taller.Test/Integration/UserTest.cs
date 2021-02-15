@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Taller.API;
 using Taller.CORE.DTO;
@@ -28,11 +29,15 @@ namespace KaynJungle.IntegrationTests
 
             // Act
             var response = await _client.PostAsync(request, null);
+            var value = await response.Content.ReadAsStringAsync();
+            var users = JsonSerializer.Deserialize<List<UserDTO>>(value);
 
             // Assert
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);      // Con FluentAssertions
+            users.Should().HaveCount(9);
             // Assert.Equal(HttpStatusCode.OK, response.StatusCode); // Sin FluentAssertions
+            // Assert.True(users.Count == 9);
         }
 
         [Fact]
