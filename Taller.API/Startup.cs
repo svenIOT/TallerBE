@@ -16,6 +16,8 @@ using Taller.BL.Implementations;
 using Taller.DAL.Models;
 using Taller.DAL.Repository.Contracts;
 using Taller.DAL.Repository.Implements;
+using Microsoft.OpenApi.Models;
+
 
 namespace Taller.API
 {
@@ -53,6 +55,10 @@ namespace Taller.API
             // Propuesta
             services.AddScoped<IPropositionBL, PropositionBL>();
             services.AddScoped<IRepositoryProposition, RepositoryProposition>();
+
+            // Swagger
+            services.AddControllers();
+            AddSwagger(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,17 +69,48 @@ namespace Taller.API
                 app.UseDeveloperExceptionPage();
             }
 
+            // CORS
+            app.UseCors("CorsPolicy");
+
+            // Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Foo API V1");
+            });
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseCors("CorsPolicy");
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+        }
+
+        // Swagger private method
+        private void AddSwagger(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                var groupName = "v1";
+
+                options.SwaggerDoc(groupName, new OpenApiInfo
+                {
+                    Title = $"Foo {groupName}",
+                    Version = groupName,
+                    Description = "Foo API",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Foo Company",
+                        Email = string.Empty,
+                        Url = new Uri("https://foo.com/"),
+                    }
+                });
             });
         }
     }
